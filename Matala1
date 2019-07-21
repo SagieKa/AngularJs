@@ -1,0 +1,43 @@
+const myself={
+  name:'sagie',
+  age:'26',
+  address:{city:'holon',contry:'israel'},
+  family:[{name:'orel',age:'25'}],
+  getAdress(){return this.address},
+  howManyRelatives(){return (this.family).length},
+  printMyName(){c(this.name)},
+  addFamilyRelative(obj){(this.family).push(obj)},
+	setName(newName){this.name=newName}
+}
+
+function c(msg){
+  console.log(msg)
+}
+
+function isObject(x){
+  if(typeof(x)=='object'){
+    return true}
+  else{
+    return false
+  }
+}
+
+function printObject(obj){
+  for(let n in obj){
+    if(isObject(obj[n])===true){
+      
+       printObject(obj[n])
+    }
+    else{
+    c(`${n}:${obj[n]}`)
+  }}
+}
+
+printObject(myself)
+c(myself.getAdress())
+c(myself.howManyRelatives())
+myself.printMyName()
+myself.setName("sagie2")
+myself.addFamilyRelative({name:'abba',age:'45'})
+myself.printMyName()
+printObject(myself)
