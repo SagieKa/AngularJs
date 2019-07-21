@@ -55,11 +55,18 @@ function createMobilePhone(model,size,price){
 
 function MobilePhone(model,size,price){
 	
-  this.model=model
+  
   this.size=size
-  this.price=price
+  let _model=null
+  let _price=0
   this.setNumber=function(num){this.number=num}
   this.getNumber=function(){c(this.number)}
+  this.getPrice= ()=>{return _price}
+  this.setPrice=(num)=>{if((num > _price) && (num >0 )){_price=num}}
+  this.setPrice(price)
+  this.setModel=(newModel)=>{if(newModel.length>3){_model=newModel}}
+  this.getModel= ()=>{return _model}
+  this.setModel(model)
   
 }
 
@@ -68,8 +75,18 @@ const Mobile=createMobilePhone("Iphone","5.5","3000ILS")
 Mobile.setNumber("0509095295")
 Mobile.getNumber()
 
-const newMobile= new MobilePhone("Galaxy", "6.5", "2300ILS")
+const newMobile= new MobilePhone("Galaxy", "6.5", "2300")
 newMobile.setNumber("0542025665")
 newMobile.getNumber()
+c(newMobile.getPrice())
+newMobile.setPrice(2500)
+c(newMobile.getPrice())
+
+c(newMobile.getModel())
+newMobile.setModel("aaaa")
+c(newMobile.getModel())
+
+
+
 
 
