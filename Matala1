@@ -41,3 +41,35 @@ myself.setName("sagie2")
 myself.addFamilyRelative({name:'abba',age:'45'})
 myself.printMyName()
 printObject(myself)
+
+
+function createMobilePhone(model,size,price){
+	var res={}
+  res.model=model
+  res.size=size
+  res.price=price
+  res.setNumber=function(num){res.number=num}
+  res.getNumber=function(){c(res.number)}
+  return res
+}
+
+function MobilePhone(model,size,price){
+	
+  this.model=model
+  this.size=size
+  this.price=price
+  this.setNumber=function(num){this.number=num}
+  this.getNumber=function(){c(this.number)}
+  
+}
+
+
+const Mobile=createMobilePhone("Iphone","5.5","3000ILS")
+Mobile.setNumber("0509095295")
+Mobile.getNumber()
+
+const newMobile= new MobilePhone("Galaxy", "6.5", "2300ILS")
+newMobile.setNumber("0542025665")
+newMobile.getNumber()
+
+
