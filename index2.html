@@ -1,0 +1,45 @@
+    
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="formctrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="formctrl">
+            
+            
+            <p>Hello World!</p>
+            <h1>I am head 1</h1>
+            <p>Name : <input type="text" id="nameTxt" ng-model="person.name" class="name1"></p>
+            <p>Age  : <input type="number" ng-model="person.age" id="nameTxt"></p>
+            <p>Password  : <input type="password" ng-model="person.password" id="nameTxt"></p>
+            <input type="radio" name="gender" ng-model="person.gender" value="male"> Male<br>
+            <input type="radio" name="gender" ng-model="person.gender" value="female"> Female<br>
+            <input type="radio" name="gender" ng-model="person.gender" value="other"> Other
+                <br><br>
+                <select ng-model="person.car">
+                <option value="volvo">Volvo</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+                </select>
+                <br>
+        
+                <br>
+                <input type="checkbox" name="vehicle1" value="Bike" ng-model="person.bike"> I have a bike<br>
+                <br>
+                <button ng-click="resetName()" np-model="person">Click to increase time</button>
+
+
+            <h1>Name = {{person.name}}</h1>
+            <br>
+            <pr>Person = {{person | json}}</pr>
+    </div>
+    <br>
+</body>
+</html>
