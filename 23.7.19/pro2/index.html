@@ -1,0 +1,42 @@
+    
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="childCtrl.js"></script>
+    <script src="parentCtrl.js"></script>
+    <script src="brotherCtrl.js"></script>
+</head>
+<body >
+<!-- 
+    <div ng-controller="parentCtrl as p">
+        <p>{{x}}</p>
+        <p>{{p.x}}</p>
+        <p>does not work? {{c.x}}</p>
+        <div ng-controller="childCtrl as c">
+        <p>{{x}}</p>
+        <p>{{c.x}}</p>
+        <p>{{p.x}}</p>
+        </div>        
+    </div> -->
+    <div ng-controller="parentCtrl">
+    <p>x1:<input type="text" id="nameTxt" ng-model="x1" class="x1">  <span>{{tav}}</span>   x2 : <input type="text" id="nameTxt" ng-model="x2" class="x2">
+        <br><br> = 
+        <div ng-controller="childCtrl">{{resultson}} <button ng-click="click6()">לחץ כאן לראות שינוי הבן</button></div> </p>
+    
+    <p><button ng-click="click1()">+</button><br>
+        <button ng-click="click2()">-</button><br>
+        <button ng-click="click3()">*</button><br>
+        <button ng-click="click4()">/</button>
+    </p>
+    
+</div>
+<div ng-controller="brotherCtrl">
+        <button  ng-click="click5()">click her to show the result:</button> <span ng-hide="flag==0">{{val}}</span>
+
+</div>
+    <br>
+</body>
+</html>
