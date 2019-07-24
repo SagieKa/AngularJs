@@ -1,0 +1,17 @@
+.ok {
+    color : green
+}
+
+.missing {
+    color : red;
+    border-color : red
+}
+.helek{
+    color : orange;
+    border-color : orange
+}
+.gil{
+    color : blue;
+    border-color :blue
+}
+

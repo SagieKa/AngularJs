@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+    <script src="api.service.js"></script>
+    <script src="data.service.js"></script>
+    <script src="Inputctrl.js"></script>
+    <script src="Sumtctrl.js"></script>
+    <script src="Divctrl.js"></script>
+    <script src="Actrl.js"></script>
+    <script src="Bctrl.js"></script>
+  
+
+</head>
+<body >
+
+    <div ng-controller="InputCtrl">
+        <p>A = <input type="number" ng-model="data.a" > </p>
+        <p>B = <input type="number" ng-model="data.b" > </p>
+        <p><input type="radio"  name="color" ng-model="data.color" value="green blue"> green blue </p>
+        <p><input type="radio"  name="color" ng-model="data.color" value="blue brown"> blue brown </p>
+        
+        
+        
+
+    </div>
+
+    
+    <div ng-controller="DivCtrl">
+        <p>a = {{data.a}}</p>
+        <p>b = {{data.b}}</p>
+        <p>color = {{data.color}}</p>
+        <p>Div a/b = {{data.a/data.b}}</p>
+        <p ng-class = "getDivClass()">good/wrong?</p>
+
+
+    </div>
+
+    <div ng-controller="SumCtrl">
+            <p>a = {{data.a}}</p>
+            <p>b = {{data.b}}</p>
+            <p>color = {{data.color}}</p>
+            <p>Sum a+b = {{data.a+data.b}}</p>
+            <p ng-class="getSumClass()">good/wrong?</p>
+
+    </div>
+
+    <div ng-controller="ACtrl">
+            
+            <p>A={{AA}}</p>
+            <button ng-click="A()">Print</button>
+    </div>
+
+    <div ng-controller="BCtrl">
+
+            <p>B={{BB}}</p>
+            <button ng-click="B()">Print</button>
+
+    </div>
+    <br>
+</body>
+</html>

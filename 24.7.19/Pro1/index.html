@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <p class="missing">MISSING</p>
+        <p class="ok">MISSING</p>
+        <hr>
+        <p ng-class = "getClassName()">NAME : <input type="text" ng-model="name" ></p>
+        <p ng-class = "getClassEmail()"> email: <input type="text" ng-model="email" ></p>
+        <p ng-class = "getClassAge()">age : <input type="text" ng-model="age"></p>
+        
+        <p ng-class="all_ok()" >Verification</p>
+        <button ng-click="ok()" > djdfnj</button>
+
+    </div>
+
+    
+    <br>
+</body>
+</html>
