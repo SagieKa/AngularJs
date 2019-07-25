@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="data.service.js"></script>
+    <script src="service.service.js"></script>
+    <script src="globalconst.service.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <table style="width:100%">
+            <tr>
+              <th>Id</th> 
+              <th>Title</th>
+              <th>Body</th>
+            </tr>
+            <tr ng-repeat="todo in todos.items"> 
+              <td >{{todo.id}}</td>
+              <td >{{todo.title}}</td>
+              <td >{{todo.body}}</td>
+
+            </tr>
+            <tr> 
+              <td >ID -> View </td>
+              <td ><input type="number" ng-model="id_view.num" > </td>
+              <td > <button ng-click="A()">Start</button></td>
+
+            </tr>
+               
+          </table>
+          <p>The Vlaue of itemsNum is:  => {{todos.itemsNum}}</p>
+
+          <p>The Vlaue of view is:  => {{view}}</p>
+        <!-- <p ng-repeat="todo in todos.items">{{todo}}</p> -->
+
+    </div>
+
+    
+    <br>
+</body>
+</html>
