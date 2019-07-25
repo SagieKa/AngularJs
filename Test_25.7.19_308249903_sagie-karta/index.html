@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="data.service.js"></script>
+    <script src="service.service.js"></script>
+   
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        
+          <p><button ng-click="A1()" ng-if="x.x1_rel==flase" > {{x.X1}}</button>  <button ng-click="A2()" ng-if="x.X2_rel!='succses'">{{x.X2}} </button> <button ng-click="A3()"ng-if="x3C==0" >{{x.X3}} </button>  <button ng-click="A4()" ng-if="x4C==0" >{{x.X4}}</button> <button ng-click="A5()" ng-if="x5C==0">{{x.X5}}</button> <button ng-click="A6()" ng-if="x6C==0">{{x.X6}}</button><p>
+              <p><button ng-click="Back()">Back</button>
+
+          <p>The guesses is:  => {{x.countC}}</p>
+          <p>The correct is:  => {{x.countG}}</p>
+
+        
+
+    </div>
+
+    
+    <br>
+</body>
+</html>
