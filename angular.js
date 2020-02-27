@@ -23,6 +23,7 @@
    * @name angular.errorHandlingConfig
    * @module ng
    * @kind function
+   * jkbhlk
    *
    * @description
    * Configure several aspects of error handling in AngularJS if used as a setter or return the
